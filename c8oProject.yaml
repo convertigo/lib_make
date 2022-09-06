@@ -1,0 +1,19 @@
+↑convertigo: 8.0.0.m006
+↓lib_Integromat [core.Project]: 
+  comment: This is the Integromat (Make) Connector for Convertigo No Code forms
+  corsOrigin: =Origin
+  version: 1.0
+  ↓IntegromatConnector [connectors.HttpConnector]: 🗏 connectors/IntegromatConnector.yaml
+  ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
+  ↓forms_Integromat [sequences.GenericSequence]: 🗏 sequences/forms_Integromat.yaml
+  ↓NgxBuilderTemplate [references.ProjectSchemaReference]: 
+    comment: ngx builder template
+    projectName: mobilebuilder_tpl_8_0_0_ngx=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_8_0_0_ngx.zip
+  ↓Application [core.MobileApplication]: 
+    comment: Describes the mobile application global properties
+    splashRemoveMode: beforeUpdate
+    ↓Android [mobileplatforms.Android]: 
+      comment: Android platform
+    ↓iOS [mobileplatforms.IOs]: 
+      comment: iOS platform
+    ↓NgxApp [ngx.components.ApplicationComponent]: 🗏 mobileNgxApp.yaml

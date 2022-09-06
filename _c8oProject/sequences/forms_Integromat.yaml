@@ -1,0 +1,89 @@
+comment: |
+  '{
+      "en":{ 
+          "displayName": "<p>Start Integromat Scenario</p>",
+          "comment": "<div>Execute an Integomat (Make) Scenario by using a custom webhook. The webhook will receive all the data from the Form submitted</div>"
+      }
+  }'
+↓Input_variables [steps.InputVariablesStep-1653326014536]: 
+↓Object [steps.JsonObjectStep-1653326176262]: 
+  isEnabled: false
+  key: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+      - SmartType: 
+        - ↑mode: PLAIN
+        - →→: data
+  ↓Field [steps.JsonFieldStep-1653326185519]: 
+    key: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+        - SmartType: 
+          - ↑mode: PLAIN
+          - →→: field1
+    value: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+        - SmartType: 
+          - ↑mode: PLAIN
+          - →→: AA
+  ↓Field1 [steps.JsonFieldStep-1653326188374]: 
+    key: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+        - SmartType: 
+          - ↑mode: PLAIN
+          - →→: field2
+    value: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+        - SmartType: 
+          - ↑mode: PLAIN
+          - →→: BB
+  ↓Field2 [steps.JsonFieldStep-1653326188694]: 
+    key: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+        - SmartType: 
+          - ↑mode: PLAIN
+          - →→: field3
+    value: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+        - SmartType: 
+          - ↑mode: PLAIN
+          - →→: CC
+↓Call_Transaction [steps.TransactionStep-1653325813514]: 
+  connectionStringDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1653326014536
+        - java.lang.String: 
+          - ↑value: ./forms_webhook/text()
+  sourceTransaction: lib_Integromat.IntegromatConnector.ExecuteWebHook
+  ↓__body [variables.StepVariable-1653326889712]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1653326014536
+          - java.lang.String: 
+            - ↑value: ./doc
+↓forms_webhook [variables.RequestableVariable-1653325789246]: 
+  comment: |
+    '{
+        "en":{
+            "displayName": "<p>Integromat Web Hook</p>",
+            "comment": "<div>The web hook you want to trigger</div>"
+        }
+    }'
+↓doc [variables.RequestableVariable-1653325873449]: 
+↓originalDoc [variables.RequestableVariable-1653377736690]: 
+↓TestOK [core.TestCase]: 
+  ↓forms_webhook [variables.TestCaseVariable-1653326121729]: 
+    value: https://hook.eu1.make.com/zptl661a8w5holky9okxg72fo0sdfmhk
+  ↓doc [variables.TestCaseVariable-1653326121731]: 
+    value: 
