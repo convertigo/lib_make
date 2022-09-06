@@ -9,6 +9,8 @@ This is the Integromat (Make) Connector for Convertigo No Code forms
 For more technical informations : [documentation](./project.md)
 
 - [Installation](#installation)
+- [Sequences](#sequences)
+    - [forms_Integromat](#forms_integromat)
 - [Mobile Library](#mobile-library)
 
 
@@ -33,6 +35,29 @@ For more technical informations : [documentation](./project.md)
     </table>
 3. Click the `Finish` button. This will automatically import the __lib_Integromat__ project
 
+
+## Sequences
+
+### forms_Integromat
+
+<div>Execute an Integomat (Make) Scenario by using a custom webhook. The webhook will receive all the data from the Form submitted</div>
+
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>doc</td><td></td>
+</tr>
+<tr>
+<td>forms_webhook</td><td><div>The web hook you want to trigger</div></td>
+</tr>
+<tr>
+<td>originalDoc</td><td></td>
+</tr>
+</table>
 
 ## Mobile Library
 
